@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- <link rel="https://images.squarespace-cdn.com/content/v1/5d02…lk-linen-tunic_0326-v1-FINAL-copy.jpg?format=750w" href=""> -->
+    <!-- <link rel="https://images.squarespace-cdn.com/content/v1/5d02…-charcoal-silk-linen-tunic_DETAIL.jpg?format=750w" href=""> -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            /* border: 1px solid red; */
+        }
+
+        nav {
+            height: 100%;
+            width: 92%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            /* flex-grow: 1; */
+
+        }
+
+        h1 {
+            font-size: 2rem;
+            display: block;
+            box-sizing: border-box;
+            position: relative;
+            margin: auto;
+            cursor: pointer;
+            transform: translateX(-80px);
+
+
+            /* text-decoration: none; */
+        }
+
+        a {
+            text-decoration: none;
+            color: ;
+        }
+
+
+        h3 {
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .icom {
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+
+        }
+
+        .icom a {
+            font-size: 1.5rem;
+
+
+
+        }
+
+
+        .icom a:nth-child(1) {
+            display: flex;
+            display: inline-block;
+
+            margin-right: 20px;
+            text-align: right;
+        }
+
+        .icom a:nth-child(2) {
+            display: flex;
+            display: inline-block;
+
+            margin-right: 80px;
+            text-align: right;
+
+        }
+
+        h3 a {
+            padding-right: 20px;
+            font-size: 1rem;
+        }
+
+        section {
+            padding-top: 4vw;
+            width: 100%;
+            min-height: 100px;
+            /* border: 1px solid red; */
+
+        }
+
+        .box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+
+
+        }
+
+        ul {
+            padding: 60px 0;
+            display: flex;
+            border-bottom: 1px solid rgba(170, 170, 170, 0.777);
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: 50px;
+
+
+        }
+
+        li {
+            margin-right: 20px;
+            width: 80px;
+
+        }
+
+        li:nth-child(1),
+        li:nth-child(2) {
+            /* margin: 0 20px; */
+            border-right: 2px solid #aaa;
+            text-align: center;
+
+        }
+
+        .img-box {
+            width: 100%;
+            min-height: 100px;
+            /* background-color: rgb(255, 139, 139); */
+            /* text-align: center; */
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 100px;
+
+        }
+
+        .item {
+            width: 500px;
+            min-height: 600px;
+            position: relative;
+
+
+            overflow: hidden;
+            box-sizing: border-box;
+            margin: 0px auto 50px;
+            /* position: relative; */
+        }
+
+        img {
+            width: 120%;
+            position: absolute;
+            opacity: 1;
+        }
+
+        img:nth-child(1) {
+            transform: translateX(-45px)
+        }
+
+        .pc-2 {
+
+            opacity: 0;
+        }
+
+        .img-box:hover .pc-2 {
+            opacity: 1;
+
+            transition: 1s;
+        }
+
+        .img-box:hover .bword {
+            opacity: 1;
+            transition: 1s .1s;
+
+        }
+
+        .pc-2 {
+            transform: translateX(-70px)
+        }
+
+        h2,
+        p {
+
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            padding-bottom: .7rem;
+            color: black;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #aaa;
+        }
+
+        .bword {
+            padding: 20px;
+            color: azure;
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.516);
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            justify-content: center;
+            transform: translateX(200px) translateY(200px);
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            /* transform: translateX(100%); */
+
+        }
+
+        section {
+            width: 100%;
+        }
+
+        /* .bgbox{
+    width: 92%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} */
+        .img-box {
+            width: 33.333333%;
+            box-sizing: border-box;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 10px;
+        }
+
+
+        .cp1 {
+            display: flex;
+            flex-wrap: wrap;
+            /* width: 80%; */
+            margin: auto;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="box">
+                <img width="100%" src="未命名-1.gif" alt="">
+            </div>
+            <h3>
+                <a href=""></a>
+                <a href="">Shop</a>
+                <a href="">Lookbook</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+
+            </h3>
+
+            <h1> <a href="">Alameda</a> </h1>
+
+            <div class="icom">
+                <a href=""> <ion-icon name="logo-instagram"></ion-icon></a>
+                <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href=""><ion-icon name="unlink-sharp"></ion-icon></a> 0
+            </div>
+        </nav>
+    </header>
+
+
+
+    <section>
+        <div class="box">
+            <ul class="nested-category-children">
+
+                <li class="">
+                    <a href="" class="nested-category-breadcrumb-link">Tops</a>
+
+                </li>
+
+                <li class="">
+                    <a href="" class="nested-category-breadcrumb-link">Bottoms</a>
+
+                </li>
+
+                <li class="">
+                    <a href="" class="nested-category-breadcrumb-link">Sale</a>
+
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="cp1">
+
+        <div class="img-box">
+            <a href="">
+                <div class="item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                        alt="">
+
+                    <img class="pc-2"
+                        src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1585924962177-GO2SN5WOIMC9RQTF8H7F/ulihu-charcoal-silk-linen-tunic_DETAIL.jpg?format=750w"
+                        alt="">
+
+                    <h1 class="bword">
+                        <span> Quick View </span>
+                    </h1>
+                </div>
+
+                <h2>
+                    Lounge Tunic / Black
+                </h2>
+                <p>$50.00</p>
+
+        </div>
+        </div>
+        </a>
+        </div>
+        </div>
+        </div>
+
+
+        <div class="img-box">
+            <a href="">
+                <div class="item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562797325657-XD60ODTJQ4UCZZL1J493/ulihu-blue-linen-tunic_0308-v1-FINAL-copy.jpg?format=750w"
+                        alt="">
+
+                    <img class="pc-2"
+                        src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1585929753415-TG7NL6K8E6STNTC27UM8/ulihu-blue-linen-tunic_DETAIL.jpg?format=750w"
+                        alt="">
+
+                    <h1 class="bword">
+                        <span> Quick View </span>
+                    </h1>
+                </div>
+
+                <h2>
+                    Lounge Tunic / Blue
+                </h2>
+                <p>$50.00</p>
+
+        </div>
+        </div>
+        </a>
+        </div>
+        </div>
+        </div>
+
+        <div class="img-box">
+            <a href="">
+                <div class="item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560522187545-N5DN8HTK8KILKUJ4P7JP/lauren-winter-natural-dress_0172-v1-FINAL-copy.jpg?format=750w"
+                        alt="">
+
+                    <img class="pc-2"
+                        src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1585931027621-NFYY80YTYYTJ132RCYWR/lauren-winter-natural-dress_DETAIL.jpg?format=750w"
+                        alt="">
+
+                    <h1 class="bword">
+                        <span> Quick View </span>
+                    </h1>
+                </div>
+
+                <h2>
+                    Lounge Tunic / Cream
+                </h2>
+                <p>$50.00</p>
+
+        </div>
+        </div>
+        </a>
+        </div>
+        </div>
+        </div>
+        <div class="img-box">
+            <a href="">
+                <div class="item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560521860619-H5MD1F96ZD8E1O3GMRR6/lauren-winter-sonia-skirt-grey_0270-v1-FINAL-copy.jpg?format=750w"
+                        alt="">
+
+                    <img class="pc-2"
+                        src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1585931055799-SVY3S244GM2EE0U2KMDT/lauren-winter-sonia-skirt-grey_DETAIL.jpg?format=750w"
+                        alt="">
+
+                    <h1 class="bword">
+                        <span> Quick View </span>
+                    </h1>
+                </div>
+
+                <h2>
+                    Sonia Skirt
+                </h2>
+                <p>$50.00</p>
+
+        </div>
+        </div>
+        </a>
+        </div>
+        </div>
+        </div>
+        <div class="img-box">
+            <a href="">
+                <div class="item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560522400844-ZQQZO9KG459RJ59E15IR/lauren-winter-sonia-dress-terracotta_0228-v1-FINAL-copy.jpg?format=750w"
+                        alt="">
+
+                    <img class="pc-2"
+                        src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1585931071716-FGKODY90XS3PB2H9CI98/lauren-winter-sonia-dress-terracotta_DETAIL.jpg?format=750w"
+                        alt="">
+
+                    <h1 class="bword">
+                        <span> Quick View </span>
+                    </h1>
+                </div>
+
+                <h2>
+                    Sonia/ Dress
+                </h2>
+                <p>$50.00</p>
+
+        </div>
+        </div>
+        </a>
+        </div>
+        </div>
+        </div>
+        <div class="img-box">
+            <a href="">
+                <div class="item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560521390690-LGUJJS4JHD4KXZ8D2EKL/lauren-winter-wide-pant-natural_0178-v1-FINAL.jpg?format=750w"
+                        alt="">
+
+                    <img class="pc-2"
+                        src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1585931090202-054CHYREFR7VY2FW2GY0/lauren-winter-wide-pant-natural_DETAIL.jpg?format=750w"
+                        alt="">
+
+                    <h1 class="bword">
+                        <span> Quick View </span>
+                    </h1>
+                </div>
+
+                <h2>
+                    Wide Pant
+                </h2>
+                <p>$50.00</p>
+
+        </div>
+        </div>
+        </a>
+        </div>
+        </div>
+        </div>
+        <div class="img-box">
+            <a href="">
+                <div class="item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1561469222494-J9J8KRSB8TI38S7MGA5T/ulihu-blue-linen-crop-top_0320-v1-FINAL-1-copy.jpg?format=750w"
+                        alt="">
+
+                    <img class="pc-2"
+                        src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1585931206829-IMVEZOOF8T5VRGT28AQW/lauren-winter-haori-jacket_DETAIL.jpg?format=750w"
+                        alt="">
+
+                    <h1 class="bword">
+                        <span> Quick View </span>
+                    </h1>
+                </div>
+
+                <h2>
+                    Haor Jacket
+                </h2>
+                <p>$50.00</p>
+
+        </div>
+        </div>
+        </a>
+        </div>
+        </div>
+        </div>
+
+
+
+        <div class="img-box">
+            <a href="">
+                <div class="item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1560521776217-XIDGSOPYDDW8KCZ9NFNK/ulihu-blue-linen-long-short_0346-v1-FINAL-copy.jpg?format=750w"
+                        alt="">
+
+                    <img class="pc-2"
+                        src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1585931109239-Y70NLN4YZRZDIXAQCG4T/ulihu-blue-linen-long-short_DETAIL.jpg?format=750w"
+                        alt="">
+
+                    <h1 class="bword">
+                        <span> Quick View </span>
+                    </h1>
+                </div>
+
+                <h2>
+                    Wide Pant / Blue
+                </h2>
+                <p>$50.00</p>
+
+        </div>
+        </div>
+        </a>
+        </div>
+        </div>
+        </div>
+
+
+
+
+        <div class="img-box">
+            <a href="">
+                <div class="item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1561572497789-WUNWIPJCDCFUFD2J2VOY/kimem-long-pleated-skirt-black_0354-v1-FINAL-copy.jpg?format=750w"
+                        alt="">
+
+                    <img class="pc-2"
+                        src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1585931124368-FKIXP47TG9GW4HIDSD69/kimem-long-pleated-skirt-black_DETAIL.jpg?format=750w"
+                        alt="">
+
+                    <h1 class="bword">
+                        <span> Quick View </span>
+                    </h1>
+                </div>
+
+                <h2>
+                    Jane Skirt
+                </h2>
+                <p>$50.00</p>
+
+        </div>
+        </div>
+        </a>
+        </div>
+        </div>
+        </div>
+
+
+        </div>
+
+        </div>
+    </section>
+    <section>
+
+
+
+
+    </section>
+    <footer></footer>
+</body>
+
+</html>
